@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'demo-block',
   data () {
     return {
       isExpand: false
@@ -28,13 +28,14 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 .demo-container{
   transition: max-height .3s ease;
   overflow: hidden;
 }
 .docs-demo{
   width:100%;
+  overflow: hidden;
   height: auto;
   box-sizing: border-box;
   font-size: 14px;
@@ -65,7 +66,10 @@ export default {
   border-bottom: 1px solid #eee;
 }
 .docs-demo__triangle{
-  transform: rotate(180deg);
+  color: #888;
+  &:hover{
+    cursor: pointer;
+  }
 }
 .highlight-wrapper{
   display: none;

@@ -4,12 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+import demoBlock from './components/demo-block.vue';
+import MeUI from '../packages';
+import '../packages/theme/index.less';
+
+Vue.component(demoBlock.name, demoBlock);
+Vue.use(MeUI);
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
-})
+  render: h => h(App)
+});

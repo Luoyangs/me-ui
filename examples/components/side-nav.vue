@@ -4,16 +4,17 @@
       <p class="title">{{title}}</p>
       <div class="items" v-for="(nav,index) in navs[title]" :key="index" v-if="nav.desc">
         <router-link :class="$route.name === nav.name ? 'active':''" v-if="nav.name" :to="{name: nav.name}">{{nav.desc}}</router-link>
-        <p v-else class="group">{{nav.desc}}</p>
-        <div v-for="(item,index) in nav.items">
+        <p v-else class="group">{{nav.desc}}[{{nav.items.length}}]</p>
+        <div v-for="(item,index) in nav.items" :key="index">
           <router-link :to="{name:item.name}" :class="$route.name === item.name?'active':''" class="comp">{{item.desc}}</router-link>
         </div>
       </div>
     </div>
+    <div class="empty">WWW.BAIDU</div>
   </div>
 </template>
 <script>
- import { navsConf } from "../router/navs.json";
+ import navsConf from "../router/navs.json";
  
  export default{
    data(){
@@ -25,9 +26,7 @@
 </script>
 <style scoped lang="less">
 .side-nav{
-  display: inline-block;
-  margin: 32px 0;
-  padding: 0;
+  padding: 12px 0;
   color: #3F536E;
   background-color: #fff;
   z-index: 99;
@@ -37,7 +36,7 @@
   .title{
     padding: 0 24px 8px;
     color: #8DABC4;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -49,7 +48,7 @@
     a{
       display: block;
       position: relative;
-      padding: 8px 24px;
+      padding: 8px 22px;
       color: #3F536E;
       font-weight: normal;
       line-height: 1.5;
@@ -65,12 +64,12 @@
     .comp{
       display: block;
       position: relative;
-      padding: 6px 24px 6px 32px;
+      padding: 6px 20px 6px 32px;
       color: #616367;
       font-size: 14px;
     }
     .active{
-      color: #3FAAF5;
+      color: #0bf;
     }
   }
 }

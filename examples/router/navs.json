@@ -1,7 +1,7 @@
 {
   "开发指南": [{
-      "name": "guide",
-      "path": "/guide",
+      "name": "giude",
+      "path": "/giude",
       "desc": "介绍"
     }, {
       "name": "install",
@@ -24,29 +24,98 @@
       "desc": "更新日志"
     }
   ],
-  "组件": [{
-    "desc": "基础组件",
-    "path": "/component",
-    "items": [{
-        "desc": "Layout 布局",
-        "name": "layout",
-        "path": "/layout"
-      },
-      {
-        "desc": "Icon 图标",
-        "name": "icon",
-        "path": "/icon"
-      },
-      {
-        "desc": "Button 按钮",
-        "name": "button",
-        "path": "/button"
-      },
-      {
-        "desc": "Tag 标签",
-        "name": "tag",
-        "path": "/tag"
-      }
-    ]
-  }]
+  "组件系统": [{
+      "desc": "Form 组件",
+      "path": "/forms",
+      "items": [{
+          "desc": "Button 水波纹按钮",
+          "name": "button",
+          "path": "/button"
+        },
+        {
+          "desc": "Input 输入框",
+          "name": "input",
+          "path": "/input"
+        },
+        {
+          "desc": "Checkbox 复选框",
+          "name": "checkbox",
+          "path": "/checkbox"
+        },
+        {
+          "desc": "Radio 单选框",
+          "name": "radio",
+          "path": "/radio"
+        },
+        {
+          "desc": "Rate 评分",
+          "name": "rate",
+          "path": "/rate"
+        },
+        {
+          "desc": "Upload 上传",
+          "name": "upload",
+          "path": "/upload"
+        },
+        {
+          "desc": "Form 表单",
+          "name": "form",
+          "path": "/form"
+        }
+      ]
+    },
+    {
+      "desc": "View 组件",
+      "path": "/views",
+      "items": [{
+          "desc": "LoadingBar 加载进度条",
+          "name": "loading-bar",
+          "path": "/loadingBar"
+        },
+        {
+          "desc": "Message 消息提醒",
+          "name": "message",
+          "path": "/message"
+        },
+        {
+          "desc": "Icon 图标",
+          "name": "icon",
+          "path": "/icon"
+        },
+        {
+          "desc": "Progress 进度条",
+          "name": "progress",
+          "path": "/progress"
+        },
+        {
+          "desc": "Swiper 走马灯",
+          "name": "swiper",
+          "path": "/swiper"
+        },
+        {
+          "desc": "LoadMore 滚动加载",
+          "name": "loadmore",
+          "path": "/loadmore"
+        },
+        {
+          "desc": "Pager 分页",
+          "name": "pager",
+          "path": "/pager"
+        }
+      ]
+    },
+    {
+      "desc": "View 指令",
+      "path": "/directives",
+      "items": [{
+        "desc": "Loading 加载",
+        "name": "loading",
+        "path": "/loading"
+      }, {
+        "desc": "imgLazy 图片懒加载",
+        "name": "imglazy",
+        "path": "/imglazy"
+      }]
+    }
+  ]
 }

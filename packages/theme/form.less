@@ -1,0 +1,56 @@
+.me-form{
+  .me-form-item{
+    margin: 8px 0;
+    vertical-align: top;
+    .clearfix();
+    .label{
+      text-align: right;
+      vertical-align: middle;
+      float: left;
+      font-size: 12px;
+      color: #495060;
+      line-height: 32px;
+      padding: 10px 12px 10px 0;
+      box-sizing: border-box;
+    }
+    .content{
+      position: relative;
+      line-height: 32px;
+      font-size: 12px;
+    }
+    .tip{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      line-height: 1;
+      padding-top: 6px;
+      color: #ed3f14;
+    }
+    &.is-required{
+      .label::before{
+        content: '';
+        display: inline-block;
+        margin-right: 4px;
+        line-height: 1;
+        font-family: SimSun;
+        font-size: 12px;
+        color: #ed3f14;
+      }
+    }
+  }
+  &.label-left .me-form-item .label{
+    text-align: left;
+  }
+  &.label-top .me-form-item .label{
+    float: none;
+    display: inline-block;
+    padding: 0;
+    line-height: 5px;
+  }
+  &.inline .me-form-item{
+    display: inline-block;
+    width: 100%;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+}

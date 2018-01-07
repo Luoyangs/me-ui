@@ -1,0 +1,101 @@
+.me-progress{
+  position: relative;
+  line-height: 1;
+  .bar{
+    padding-right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    margin-right: -55px;
+    box-sizing: border-box;
+    .outer{
+      height: 6px;
+      border-radius: 100px;
+      background: #e6ebf5;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle;
+    }
+    .inner{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: #409EFF;
+      text-align: right;
+      border-radius: 100px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .innerText{
+      display: inline-block;
+      vertical-align: middle;
+      color: #eee;
+      font-size: 12px;
+      margin: 0 5px;
+    }
+  }
+  .text{
+    font-size: 14px;
+    color: #5a5e66;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    line-height: 1;
+    i{
+      vertical-align: middle;
+    }
+  }
+  &.is-line{
+    margin-bottom: 15px;
+    width: 350px;
+  }
+  &.is-circle{
+    display: inline-block;
+    .text{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      transform: translate(0,-50%);
+      i{
+        vertical-align: middle;
+        display: inline-block;
+      }
+    }
+  }
+  &.widthout-text{
+    .text{
+      display: none;
+    }
+    .bar{
+      padding-right: 0;
+      margin-right: 0;
+      display: block;
+    }
+  }
+  &.text-inside{
+    .bar{
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+  &.is-success{
+    .inner{
+      background:#67c23a;
+    }
+    .text{
+      color: #67c23a;
+    }
+  }
+  &.is-error{
+    .inner{
+      background: #fa5555;
+    }
+    .text{
+      color: #fa5555;
+    }
+  }
+}

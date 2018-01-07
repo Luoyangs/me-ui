@@ -1,0 +1,277 @@
+.me-upload{
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  input{
+    display: none;
+  }
+  iframe{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  &.is-card{
+    background: #fbfdffe0;
+    border: 1px dashed #c0ccda;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 148px;
+    height: 148px;
+    cursor: pointer;
+    line-height: 148px;
+    vertical-align: top;
+    i{
+      font-size: 28px;
+      color: #8c939d;
+    }
+    &:hover{
+      border-color:#0fb;
+      i{
+        color: #0fb;
+      }
+    }
+  }
+}
+
+.me-upload-list{
+  margin: 0;
+  padding: 0;
+  list-style: none !important;
+  .mul-item{
+    transition: all .5s cubic-bezier(.55,0,.1,1);
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    margin-top: 4px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    &:hover{
+      background: #eee;
+      .status{
+        display: none;
+      }
+    }
+    .muli-name{
+      color: #555;
+      display: inline-block;
+      margin-right: 40px;
+      overflow: hidden;
+      padding-left: 4px;
+      padding-top: 2px;
+      text-overflow: ellipsis;
+      transition: color .3s;
+      white-space: nowrap;
+    }
+    .me-progress{
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      .text{
+        position: absolute;
+        right: 0;
+        top: -13px;
+      }
+      .bar{
+        margin-right: 0;
+        padding-right: 0;
+      }
+      &:first-child {
+        margin-top: 10px;
+      }
+    }
+    .status{
+      color: #13ce66;
+      position: absolute;
+      right: 5px;
+      top: 2px;
+      line-height: inherit;
+    }
+    .me-icon-close{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      opacity: .76;
+      color: #888;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .me-icon-delete{
+      position: absolute;
+      right: 10px;
+      top: 0;
+      font-size: 12px;
+      color: #888;
+      &:hover {
+        color: #0fb;
+      }
+    }
+  }  
+  &.is-card{
+    margin: 0;
+    display: inline;
+    vertical-align: top;
+    .mul-item{
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid #c0ccda;
+      border-radius: 6px;
+      box-sizing: border-box;
+      width: 148px;
+      height: 148px;
+      margin: 0 8px 8px 0;
+      display: inline-block;
+      &:hover{
+        .me-icon-success{
+          display: none;
+        }
+        .me-progress .text{
+          display: block;
+        }
+      }
+      .status{
+        position: absolute;
+        right: -15px;
+        top: -6px;
+        width: 40px;
+        height: 24px;
+        background: #13ce66;
+        text-align: center;
+        transform: rotate(45deg);
+        box-shadow: 0 0 1pc 1px rgba(0,0,0,0.2);
+        i {
+          font-size: 12px;
+          margin-top: 11px;
+          transform: rotate(-45deg);
+        }
+      }
+      .me-icon-close{
+        display: none;
+      }
+      .muli-name{
+        display: none;
+      }
+      .muli-thumbnail{
+        width: 100%;
+        height: 100%;
+      }
+      .muli-actions{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        cursor: default;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, .5);
+        transition: opacity .3s;
+        &::after {
+          display: inline-block;
+          content: "";
+          height: 100%;
+          vertical-align: middle
+        }
+      }
+      .me-progress {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: auto;
+        width: 126px;
+        .text {
+          top: 50%;
+        }
+      }
+    }
+  }
+  &.is-picture{
+    .mul-item{
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid #c0ccda;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 10px;
+      padding: 10px 10px 10px 90px;
+      height: 92px;
+      &:hover{
+        .me-icon-close{
+          display: block;
+        }
+        .status{
+          background: transparent;
+          box-shadow: none;
+          top: -2px;
+          right: -12px;
+        }
+        .me-progress .text{
+          display: block;
+        }
+      }
+      .me-icon-close{
+        display: none;
+      }
+      .muli-name{
+        line-height: 70px;
+        display: block;
+      }
+      .muli-thumbnail{
+        vertical-align: middle;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        float: left;
+        position: relative;
+        z-index: 1;
+        margin-left: -80px;
+      }
+      .status{
+        position: absolute;
+        right: -18px;
+        top: -7px;
+        width: 46px;
+        height: 26px;
+        background: #13ce66;
+        text-align: center;
+        transform: rotate(45deg);
+        box-shadow: 0 1px 1px #ccc;
+        i {
+          display: none;
+        }
+      }
+      .me-progress {
+        position: relative;
+        top: -7px;
+        .bar{
+          position: absolute;
+          top: -13px;
+        }
+        .text{
+          right: 0;
+          text-align: right;
+          top: -32px;
+        }
+      }
+    }
+  }
+  &.is-text{
+    .me-progress .text{
+      text-align: right;
+    }
+  }
+}
+.upload-tip{
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
